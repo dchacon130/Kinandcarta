@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Unittest Results</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h2 class="text-capitalize">Unittest Results</h2>
+                <p class='attribute'><strong>Start Time: </strong>2022-07-21 09:45:30</p>
+                <p class='attribute'><strong>Duration: </strong>40.30 s</p>
+                <p class='attribute'><strong>Summary: </strong>Total: 1, Pass: 0, Error: 1</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-10 col-md-10">
+                <table class='table table-hover table-responsive'>
+                    <thead>
+                        <tr>
+                            <th>__main__.Login</th>
+                            <th>Status</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class='warning'>
+                            <td class="col-xs-10">test_search_by_Alexa</td>
+                            <td class="col-xs-1">
+                                <span class="label label-warning" style="display:block;width:40px;">Error</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p>
+22
+Test Completed
+</p><p style="color:maroon;">NoSuchElementException: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="add-to-cart-button"]"}
+  (Session info: chrome=103.0.5060.134)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00D65FD3+2187219]
+	Ordinal0 [0x00CFE6D1+1763025]
+	Ordinal0 [0x00C13E78+802424]
+	Ordinal0 [0x00C41C10+990224]
+	Ordinal0 [0x00C41EAB+990891]
+	Ordinal0 [0x00C6EC92+1174674]
+	Ordinal0 [0x00C5CBD4+1100756]
+	Ordinal0 [0x00C6CFC2+1167298]
+	Ordinal0 [0x00C5C9A6+1100198]
+	Ordinal0 [0x00C36F80+946048]
+	Ordinal0 [0x00C37E76+949878]
+	GetHandleVerifier [0x010090C2+2721218]
+	GetHandleVerifier [0x00FFAAF0+2662384]
+	GetHandleVerifier [0x00DF137A+526458]
+	GetHandleVerifier [0x00DF0416+522518]
+	Ordinal0 [0x00D04EAB+1789611]
+	Ordinal0 [0x00D097A8+1808296]
+	Ordinal0 [0x00D09895+1808533]
+	Ordinal0 [0x00D126C1+1844929]
+	BaseThreadInitThunk [0x7707FA29+25]
+	RtlGetAppContainerNamedObjectPath [0x77757A9E+286]
+	RtlGetAppContainerNamedObjectPath [0x77757A6E+238]
+</p><p style="color:maroon;">Traceback (most recent call last):
+  File "f:\KinAndCarta\amazon.py", line 40, in test_search_by_Alexa
+    if self.driver.find_element(By.ID, "add-to-cart-button").is_displayed():
+  File "C:\Users\diego\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\webdriver.py", line 857, in find_element
+    return self.execute(Command.FIND_ELEMENT, {
+  File "C:\Users\diego\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\webdriver.py", line 435, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\diego\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\errorhandler.py", line 247, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="add-to-cart-button"]"}
+  (Session info: chrome=103.0.5060.134)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00D65FD3+2187219]
+	Ordinal0 [0x00CFE6D1+1763025]
+	Ordinal0 [0x00C13E78+802424]
+	Ordinal0 [0x00C41C10+990224]
+	Ordinal0 [0x00C41EAB+990891]
+	Ordinal0 [0x00C6EC92+1174674]
+	Ordinal0 [0x00C5CBD4+1100756]
+	Ordinal0 [0x00C6CFC2+1167298]
+	Ordinal0 [0x00C5C9A6+1100198]
+	Ordinal0 [0x00C36F80+946048]
+	Ordinal0 [0x00C37E76+949878]
+	GetHandleVerifier [0x010090C2+2721218]
+	GetHandleVerifier [0x00FFAAF0+2662384]
+	GetHandleVerifier [0x00DF137A+526458]
+	GetHandleVerifier [0x00DF0416+522518]
+	Ordinal0 [0x00D04EAB+1789611]
+	Ordinal0 [0x00D097A8+1808296]
+	Ordinal0 [0x00D09895+1808533]
+	Ordinal0 [0x00D126C1+1844929]
+	BaseThreadInitThunk [0x7707FA29+25]
+	RtlGetAppContainerNamedObjectPath [0x77757A9E+286]
+	RtlGetAppContainerNamedObjectPath [0x77757A6E+238]
+
+f:\KinAndCarta\amazon.py:19: DeprecationWarning: executable_path has been deprecated, please pass in a Service object
+  cls.driver = webdriver.Chrome(executable_path=ChromeDriverManager().install())
+</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                Total: 1, Pass: 0, Error: 1 -- Duration: 40.30 s
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('td').on('click', '.btn', function(e){
+                e.preventDefault();
+                e.stopImmediatePropagation();
+                var $this = $(this);
+                var $nextRow = $this.closest('tr').next('tr');
+                $nextRow.slideToggle("fast");
+                $this.text(function(i, text){
+                    if (text === 'View') {
+                        return 'Hide';
+                    } else {
+                        return 'View';
+                    };
+                });
+            });
+        });
+    </script>
+</body>
+</html

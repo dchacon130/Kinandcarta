@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Unittest Results</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h2 class="text-capitalize">Unittest Results</h2>
+                <p class='attribute'><strong>Start Time: </strong>2022-07-21 09:29:04</p>
+                <p class='attribute'><strong>Duration: </strong>25.89 s</p>
+                <p class='attribute'><strong>Summary: </strong>Total: 2, Pass: 0, Error: 2</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-10 col-md-10">
+                <table class='table table-hover table-responsive'>
+                    <thead>
+                        <tr>
+                            <th>__main__.Login</th>
+                            <th>Status</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class='warning'>
+                            <td class="col-xs-10">test_search_by_Alexa</td>
+                            <td class="col-xs-1">
+                                <span class="label label-warning" style="display:block;width:40px;">Error</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p>
+Se encontro un error en la automatización
+</p><p style="color:maroon;">NameError: name 'driver' is not defined</p><p style="color:maroon;">Traceback (most recent call last):
+  File "f:\KinAndCarta\amazon.py", line 28, in test_search_by_Alexa
+    element = WebDriverWait(driver, 5).until(
+NameError: name 'driver' is not defined
+f:\KinAndCarta\amazon.py:18: DeprecationWarning: executable_path has been deprecated, please pass in a Service object
+  cls.driver = webdriver.Chrome(executable_path=ChromeDriverManager().install())
+</p>
+                            </td>
+                        </tr>
+                        <tr class='warning'>
+                            <td class="col-xs-10">test_search_by_Alexa</td>
+                            <td class="col-xs-1">
+                                <span class="label label-warning" style="display:block;width:40px;">Error</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p>
+Se encontro un error en la automatización
+</p><p style="color:maroon;">MaxRetryError: HTTPConnectionPool(host='localhost', port=59527): Max retries exceeded with url: /session/cdfe2c6ee092ecbe4e68c3860760719b/window (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000022216BB45E0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))</p><p style="color:maroon;">Traceback (most recent call last):
+  File "C:\Users\diego\AppData\Roaming\Python\Python310\site-packages\urllib3\connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+  File "C:\Users\diego\AppData\Roaming\Python\Python310\site-packages\urllib3\util\connection.py", line 95, in create_connection
+    raise err
+  File "C:\Users\diego\AppData\Roaming\Python\Python310\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] No connection could be made because the target machine actively refused it
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\diego\AppData\Roaming\Python\Python310\site-packages\urllib3\connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "C:\Users\diego\AppData\Roaming\Python\Python310\site-packages\urllib3\connectionpool.py", line 398, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "C:\Users\diego\AppData\Roaming\Python\Python310\site-packages\urllib3\connection.py", line 239, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "C:\Program Files\Python310\lib\http\client.py", line 1282, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "C:\Program Files\Python310\lib\http\client.py", line 1328, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "C:\Program Files\Python310\lib\http\client.py", line 1277, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Program Files\Python310\lib\http\client.py", line 1037, in _send_output
+    self.send(msg)
+  File "C:\Program Files\Python310\lib\http\client.py", line 975, in send
+    self.connect()
+  File "C:\Users\diego\AppData\Roaming\Python\Python310\site-packages\urllib3\connection.py", line 205, in connect
+    conn = self._new_conn()
+  File "C:\Users\diego\AppData\Roaming\Python\Python310\site-packages\urllib3\connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x0000022216BB45E0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "f:\KinAndCarta\amazon.py", line 58, in tearDown
+    cls.driver.close()
+  File "C:\Users\diego\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\webdriver.py", line 552, in close
+    self.execute(Command.CLOSE)
+  File "C:\Users\diego\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\webdriver.py", line 433, in execute
+    response = self.command_executor.execute(driver_command, params)
+  File "C:\Users\diego\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\remote_connection.py", line 344, in execute
+    return self._request(command_info[0], url, body=data)
+  File "C:\Users\diego\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\remote_connection.py", line 366, in _request
+    response = self._conn.request(method, url, body=body, headers=headers)
+  File "C:\Users\diego\AppData\Roaming\Python\Python310\site-packages\urllib3\request.py", line 74, in request
+    return self.request_encode_url(
+  File "C:\Users\diego\AppData\Roaming\Python\Python310\site-packages\urllib3\request.py", line 96, in request_encode_url
+    return self.urlopen(method, url, **extra_kw)
+  File "C:\Users\diego\AppData\Roaming\Python\Python310\site-packages\urllib3\poolmanager.py", line 376, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "C:\Users\diego\AppData\Roaming\Python\Python310\site-packages\urllib3\connectionpool.py", line 813, in urlopen
+    return self.urlopen(
+  File "C:\Users\diego\AppData\Roaming\Python\Python310\site-packages\urllib3\connectionpool.py", line 813, in urlopen
+    return self.urlopen(
+  File "C:\Users\diego\AppData\Roaming\Python\Python310\site-packages\urllib3\connectionpool.py", line 813, in urlopen
+    return self.urlopen(
+  File "C:\Users\diego\AppData\Roaming\Python\Python310\site-packages\urllib3\connectionpool.py", line 785, in urlopen
+    retries = retries.increment(
+  File "C:\Users\diego\AppData\Roaming\Python\Python310\site-packages\urllib3\util\retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=59527): Max retries exceeded with url: /session/cdfe2c6ee092ecbe4e68c3860760719b/window (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000022216BB45E0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+f:\KinAndCarta\amazon.py:18: DeprecationWarning: executable_path has been deprecated, please pass in a Service object
+  cls.driver = webdriver.Chrome(executable_path=ChromeDriverManager().install())
+</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                Total: 2, Pass: 0, Error: 2 -- Duration: 25.89 s
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('td').on('click', '.btn', function(e){
+                e.preventDefault();
+                e.stopImmediatePropagation();
+                var $this = $(this);
+                var $nextRow = $this.closest('tr').next('tr');
+                $nextRow.slideToggle("fast");
+                $this.text(function(i, text){
+                    if (text === 'View') {
+                        return 'Hide';
+                    } else {
+                        return 'View';
+                    };
+                });
+            });
+        });
+    </script>
+</body>
+</html
