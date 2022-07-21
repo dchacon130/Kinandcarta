@@ -1,4 +1,6 @@
+import unittest
 import configparser
+import HtmlTestRunner
 
 from selenium import webdriver
 from locators.locators import *
@@ -49,3 +51,6 @@ class AmazonPage:
         else:
             noProduct = self.driver.find_element(By.XPATH, self.LabelCarQuantity_Id).text
             return noProduct
+
+if __name__ == '__main__':
+	unittest.main(testRunner=HtmlTestRunner.HTMLTestRunner(output='Results'))
