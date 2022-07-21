@@ -1,3 +1,6 @@
+import configparser
+
+from selenium import webdriver
 from locators.locators import *
 from selenium.webdriver.common.by import By
 
@@ -16,6 +19,14 @@ class AmazonPage:
         self.LabelStock_Xpath = Locators.LabelStock_Xpath
     
     def insert_text_to_search_bar(self, text):
+        config = configparser.ConfigParser()
+        config.read('configuracion.ini')
+        self.browser = config['Browser']['Chrome']
+        self.website = config['Website']['Page']
+        self.driver = webdriver.Chrome(executable_path= self.browser)
+        self.driver.get(self.website)
+        self.driver.maximize_window()
+
         self.driver.find_element(By.ID, self.SearchBoxBy_Id).clear()
         self.driver.find_element(By.ID, self.SearchBoxBy_Id).send_keys(text)
 
